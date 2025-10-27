@@ -1,0 +1,799 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5faff;
+  color: #003366;
+}
+
+/* Top Alert Banner */
+.alert-banner {
+  width: 100%;
+  background: linear-gradient(90deg, #ff4d4f, #ff9f43);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 15px;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  font-size: 0.95em;
+  text-align: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.alert-banner button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.alert-banner.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .alert-banner {
+    font-size: 0.85em;
+    padding: 8px 10px;
+  }
+  .alert-banner button {
+    font-size: 1em;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navbar */
+header {
+  background-color: #0038A8;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emergency-btn {
+  background-color: #ce1126;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, #ce1126, #0038a8);
+  color: white;
+  padding: 120px 20px 80px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.view-alerts {
+  background-color: #fcd116;
+  color: #003366;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.report-emergency {
+  background-color: #ce1126; /* Filipino Red */
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.report-emergency:hover {
+  background-color: #e63b42;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.learn-tips {
+  background-color: white;
+  color: #003366;
+  border: 2px solid #fcd116;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.learn-tips:hover {
+  background-color: #fcd116;
+  color: #003366;
+}
+
+/* Status Section */
+.status-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 50px 20px;
+}
+
+.card {
+  background: white;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card .risk {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.low {
+  color: green;
+}
+
+/* Guide Section */
+.guide {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.guide h2 {
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.carousel {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.carousel-dots {
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ce1126;
+}
+
+/* Tools */
+.tools {
+  background-color: #f0f8ff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.tools-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tool {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  width: 220px;
+  font-weight: 600;
+}
+
+/* CTA */
+.stay-safe {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(90deg, #3b2e91, #c83b6f);
+  color: white;
+}
+
+.stay-safe h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stay-safe p {
+  font-size: 1em;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Buttons Container */
+.safe-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Base Button Style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+  min-width: 220px;
+  height: 48px;
+}
+
+.btn {
+  gap: 0; /* remove spacing meant for icons */
+}
+
+/* Button Styles */
+.plan-btn {
+  background-color: #ffd43b;
+  color: #333;
+  border: 2px solid #f2c200;
+}
+
+.plan-btn:hover {
+  background-color: #ffcd00;
+}
+
+.tips-btn {
+  background-color: #ffffff;
+  color: #007bff;
+  border: none; /* no border */
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tips-btn:hover {
+  background-color: #f0f4ff; /* light blue hover */
+  color: #0056b3; /* darker blue text */
+}
+
+/* Responsive Fix */
+@media (max-width: 600px) {
+  .btn {
+    width: 90%;
+    min-width: unset;
+  }
+}
+
+/* Footer */
+.site-footer {
+  background-color: #0038A8; /* Filipino Blue */
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-size: 0.95em;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto 20px auto;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fcd116; /* Filipino Yellow */
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #fcd116;
+  text-decoration: underline;
+}
+
+.footer-col p {
+  line-height: 1.5;
+  max-width: 250px;
+}
+
+/* Divider line */
+.site-footer hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+/* Footer bottom text */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.footer-bottom strong {
+  color: #fcd116;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col p {
+    margin: 0 auto;
+  }
+}
+
+/* Status Card Section */
+.status-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 50px 20px;
+}
+
+/* Base Card Style */
+.status-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  width: 340px;
+  border: 1.5px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Color Borders */
+.weather {
+  border-color: #007bff40;
+}
+
+.risk {
+  border-color: #28a74540;
+}
+
+.contacts {
+  border-color: #dc354540;
+}
+
+/* Titles */
+.card-title {
+  font-size: 1em;
+  font-weight: 600;
+  padding: 15px 20px 0;
+}
+
+.blue {
+  color: #007bff;
+}
+
+.green {
+  color: #28a745;
+}
+
+.red {
+  color: #dc3545;
+}
+
+/* Card Content */
+.card-content {
+  padding: 15px 20px 20px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* Weather Card Layout */
+.temp-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temp {
+  font-size: 1.2em;
+}
+
+.condition {
+  color: #555;
+}
+
+.status-level {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.status-level.normal {
+  color: #28a745;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.location-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.85em;
+  color: #555;
+}
+
+/* Risk Card */
+.risk-level {
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-dot {
+  background-color: #28a745;
+}
+
+ .map-btn {
+  display: inline-block;
+  background-color: #007bff; /* Filipino Blue */
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.map-btn:hover {
+  background-color: #0056b3; /* darker blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Contacts Card */
+.contact {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 8px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary {
+  background-color: #dc3545;
+  color: white;
+}
+
+.secondary {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.tertiary {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.contact:hover {
+  opacity: 0.85;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .status-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+/* Essentials Tool Section */
+.tools {
+  background-color: #fafcff;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.tools h2 {
+  color: #1c1f26;
+  font-size: 1.8em;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Grid Layout */
+.tools-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Tool Card */
+.tool-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  width: 260px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Icon Circle */
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Colored Backgrounds */
+.blue-bg {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.green-bg {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.red-bg {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.yellow-bg {
+  background-color: rgba(252, 209, 22, 0.15);
+}
+
+/* Titles and Text */
+.tool-title {
+  font-size: 1.05em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.tool-title.blue { color: #007bff; }
+.tool-title.green { color: #28a745; }
+.tool-title.red { color: #dc3545; }
+.tool-title.yellow { color: #f4b400; }
+
+.tool-card p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tools-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tool-card {
+    width: 90%;
+    max-width: 340px;
+  }
+}
+
+/* PAGASA Advisories Section */
+.pagasa-section {
+  background: #f7f9fc;
+  color: #222;
+  padding: 20px 15px 30px;
+  margin-top: 60px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pagasa-section h3 {
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#advisory-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.advisory-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 12px 16px;
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.advisory-card:hover {
+  transform: translateY(-3px);
+}
+
+.advisory-card h4 {
+  color: #00509e;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.advisory-card p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.4;
+}
+
+.advisory-card a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.advisory-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .advisory-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-btn {
+    width: auto;
+    padding: 10px 20px;
+  }
+}
