@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeLink PH | Stay Safe, Stay Prepared</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Top Alert Banner -->
+<div id="alert-banner" class="alert-banner hidden">
+  <span id="alert-icon">⚠️</span>
+  <span id="alert-message">Fetching latest weather alerts...</span>
+  <button id="close-alert">✖</button>
+</div>
+
+<!-- PAGASA Weather Advisories -->
+<section id="pagasa-advisories" class="pagasa-section hidden">
+  <h3>📢 Latest PAGASA Advisories</h3>
+  <div id="advisory-list">
+    <p>Fetching latest bulletins from PAGASA...</p>
+  </div>
+</section>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">SafeLink PH</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Alerts</a></li>
+        <li><a href="#">SafeZone Map</a></li>
+        <li><a href="#">Report Emergency</a></li>
+        <li><a href="#">Contacts</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Donations</a></li>
+      </ul>
+    </nav>
+    <button class="emergency-btn">🚨 Emergency 911</button>
+  </header>
+
+  <!-- Hero Section -->
+<section class="hero">
+  <h1>Stay Safe, Stay Prepared</h1>
+  <p>Your comprehensive disaster awareness and emergency response platform for the Philippines.</p>
+  <div class="hero-buttons">
+    <button class="view-alerts">🔎 View Current Alerts</button>
+    <button class="report-emergency" onclick="window.location.href='#report'">🚨 Report Emergency</button>
+  </div>
+</section>
+
+<!-- Status Cards -->
+<section class="status-section">
+  <!-- Weather Card -->
+  <div class="status-card weather">
+    <h3 class="card-title blue">Current Weather Status</h3>
+    <div class="card-content">
+      <div class="temp-row">
+        <span class="temp">🌤 <strong id="temperature">28°C</strong></span>
+        <span class="condition" id="weatherDesc">Partly Cloudy</span>
+        <span class="status-level normal">NORMAL</span>
+      </div>
+      <div class="details-row">
+        <p>Humidity: <span id="humidity">72%</span></p>
+        <p>Wind: <span id="wind">15 km/h</span></p>
+      </div>
+      <div class="location-row">
+        <span class="location">📍 Metro Manila</span>
+        <span class="update-time" id="updatedTime">Updated 2:07:31 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Risk Level Card -->
+  <div class="status-card risk">
+    <h3 class="card-title green">Your Area Risk Level</h3>
+    <div class="card-content">
+      <p class="risk-level">
+        <span class="dot green-dot"></span>
+        <strong>Low Risk</strong>
+      </p>
+      <p>Metro Manila Area</p>
+      <button class="map-btn">View SafeZone Map</button>
+    </div>
+  </div>
+
+  <!-- Emergency Contacts Card -->
+<div class="status-card contacts">
+  <h3 class="card-title red">Emergency Contacts</h3>
+  <div class="card-content">
+    <a href="tel:911" class="contact primary">📞 NDRRMC Hotline<br><small>Call 911</small></a>
+    <a href="tel:143" class="contact secondary">📞 Red Cross<br><small>Call 143</small></a>
+    <a href="#contacts" class="contact tertiary">View All Contacts</a>
+  </div>
+</div>
+
+  <!-- Disaster Preparedness Guide -->
+  <section class="guide">
+    <h2>Disaster Preparedness Guide</h2>
+    <div class="carousel">
+      <div class="slide active">
+        <h3>🌪 Typhoon Preparedness</h3>
+        <p>Secure loose objects, stock emergency supplies, and monitor weather updates regularly.</p>
+      </div>
+      <div class="slide">
+        <h3>🌋 Earthquake Safety</h3>
+        <p>Drop, cover, and hold on. Move to open areas after shaking stops.</p>
+      </div>
+      <div class="slide">
+        <h3>🌊 Flood Awareness</h3>
+        <p>Move to higher ground and avoid walking through floodwaters.</p>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- Essential Tools -->
+<section class="tools">
+  <h2>Essential Emergency Tools</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <div class="tool-icon blue-bg">
+        <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="Map Icon">
+      </div>
+      <h3 class="tool-title blue">SafeZone Map</h3>
+      <p>Find nearest evacuation centers, hospitals, and rescue stations</p>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon green-bg">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Planner Icon">
+      </div>
+      <h3 class="tool-title green">Emergency Planner</h3>
+      <p>Generate personalized emergency plans for your family</p>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon red-bg">
+        <img src="https://cdn-icons-png.flaticon.com/512/854/854905.png" alt="Report Icon">
+      </div>
+      <h3 class="tool-title red">Report Hub</h3>
+      <p>Submit emergency reports and get instant assistance</p>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon yellow-bg">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Donate Icon">
+      </div>
+      <h3 class="tool-title yellow">Help & Donate</h3>
+      <p>Support disaster relief through verified organizations</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Call-to-Action -->
+<section class="stay-safe">
+  <h2>Ready to Stay Safe?</h2>
+  <p>Join thousands of Filipinos who are prepared for any emergency.</p>
+
+  <div class="safe-buttons">
+  <button class="btn plan-btn">Create Emergency Plan</button>
+  <button class="btn tips-btn">Learn Safety Tips</button>
+</div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Column 1: Brand Description -->
+    <div class="footer-col">
+      <h3>SafeLink PH</h3>
+      <p>Protecting Filipino communities through disaster awareness and preparedness.</p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Alerts Dashboard</a></li>
+        <li><a href="#">SafeZone Map</a></li>
+        <li><a href="#">Report Emergency</a></li>
+        <li><a href="#">Emergency Contacts</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Resources -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Safety Guides</a></li>
+        <li><a href="#">Emergency Planner</a></li>
+        <li><a href="#">Help & Donate</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Hotlines -->
+    <div class="footer-col">
+      <h4>Emergency Hotlines</h4>
+      <ul>
+        <li>NDRRMC: <strong>911</strong></li>
+        <li>Red Cross: <strong>143</strong></li>
+        <li>BFP: <strong>117</strong></li>
+        <li>PNP: <strong>117</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="footer-bottom">
+    <p>© 2025 SafeLink PH. Built for Filipino communities. Stay Safe, Stay Prepared.</p>
+     <p>Developed by: <b>Apolinario, Ashley Kyle</b></p>
+      <p><b>Cudiamat, Aidezh Anne</b></p>
+      <p><b>Legaspi, Rian Christzel</b></p> 
+      <p><b>Mampusti, Jazmine</b></p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
